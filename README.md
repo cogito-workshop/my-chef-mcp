@@ -8,11 +8,6 @@
 
 数据来源：[Anduin2017/HowToCook](https://github.com/Anduin2017/HowToCook) ⭐ 没有 star 的同学快去点个星星吧！
 
-## 📸 效果预览
-
-![功能预览1](https://mp-bc8d1f0a-3356-4a4e-8592-f73a3371baa2.cdn.bspapp.com/npm/1.png)
-![功能预览2](https://mp-bc8d1f0a-3356-4a4e-8592-f73a3371baa2.cdn.bspapp.com/npm/2.png)
-
 ## 🔌 支持的 MCP 客户端
 
 本服务器适用于所有支持 MCP 协议的 AI 助手和客户端，包括但不限于：
@@ -42,8 +37,7 @@
 1. 克隆美食仓库
 
 ```bash
-git clone https://github.com/worryzyy/howtocook-mcp.git
-cd howtocook-mcp
+
 ```
 
 2. 安装依赖（就像准备食材一样简单！）
@@ -70,16 +64,16 @@ pnpm start
 
 #### 推荐使用 Cursor 快速体验(两种方式)
 
-1. 使用 npm 包：请先运行 `npm i -g howtocook-mcp` ,否则会出现 `Failed to create client`
+1. 使用 npm 包：请先运行 `npm i -g @cogito.ai/mychef-mcp` ,否则会出现 `Failed to create client`
 
 然后在 Cursor 设置中添加 MCP 服务器配置：
 
 ```json
 {
   "mcpServers": {
-    "howtocook-mcp": {
+    "@cogito.ai/mychef-mcp": {
       "command": "npx",
-      "args": ["-y", "howtocook-mcp"]
+      "args": ["-y", "@cogito.ai/mychef-mcp"]
     }
   }
 }
@@ -90,9 +84,9 @@ pnpm start
 ```json
 {
   "mcpServers": {
-    "howtocook-mcp": {
+    "@cogito.ai/mychef-mcp": {
       "command": "node",
-      "args": ["youpath\\howtocook-mcp\\build\\index.js"]
+      "args": ["youpath\\@cogito.ai/mychef-mcp\\build\\index.js"]
     }
   }
 }
@@ -102,8 +96,8 @@ pnpm start
 
 对于其他支持 MCP 协议的客户端，请参考各自的文档进行配置，通常需要指定：
 
-- 服务器名称: `howtocook-mcp`
-- 命令: `npx -y howtocook-mcp`
+- 服务器名称: `@cogito.ai/mychef-mcp`
+- 命令: `npx -y @cogito.ai/mychef-mcp`
 
 3. 重启客户端，让美食魔法生效 ✨
 
@@ -116,13 +110,13 @@ pnpm start
 无需参数，直接召唤美食全书！
 
 ```
-请使用howtocook的MCP服务查询所有菜谱
+请使用mychef-mcp的MCP服务查询所有菜谱
 ```
 
 ### 2. 🔍 根据分类查询菜谱
 
 ```
-请使用howtocook的MCP服务查询水产类的菜谱
+请使用mychef-mcp的MCP服务查询水产类的菜谱
 ```
 
 参数:
@@ -132,7 +126,7 @@ pnpm start
 ### 3. 🧩 智能推荐一周菜谱
 
 ```
-请使用howtocook的MCP服务为3人推荐一周菜谱，我们家不吃香菜，对虾过敏
+请使用mychef-mcp的MCP服务为3人推荐一周菜谱，我们家不吃香菜，对虾过敏
 ```
 
 参数:
@@ -144,7 +138,7 @@ pnpm start
 ### 4. 🎲 今天吃什么？
 
 ```
-请使用howtocook的MCP服务为4人晚餐推荐菜单
+请使用mychef-mcp的MCP服务为4人晚餐推荐菜单
 ```
 
 参数:
@@ -153,7 +147,7 @@ pnpm start
 
 ## 📝 小贴士
 
-- 该包已发布至 npm，可直接通过`npm install -g howtocook-mcp`全局安装
+- 该包已发布至 npm，可直接通过`npm install -g @cogito.ai/mychef-mcp`全局安装
 - 本服务兼容所有支持 MCP 协议的 AI 助手和应用
 - 首次使用时，AI 可能需要一点时间来熟悉如何使用这些工具（就像烧热锅一样）
 
