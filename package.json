@@ -11,11 +11,11 @@
   ],
   "scripts": {
     "build": "npm run clean && tsc",
-    "start": "npm run clean && node build/index.js",
+    "start": "npm run clean  && npm run build && node build/index.js",
     "dev": "tsc && node build/index.js",
     "changeset:version": "changeset version",
     "release": "npm run build && changeset version && changeset publish",
-    "clean": "rm -rf build"
+    "clean": "rimraf build"
   },
   "keywords": [
     "mychef",

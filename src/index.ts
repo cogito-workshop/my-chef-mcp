@@ -6,8 +6,8 @@ import { toolRegistry } from './ToolRegistry/index.js';
 
 // create MCP instance
 const server = new McpServer({
-  name: 'my-chef-mcp',
-  version: '0.1.0',
+  name: 'mychef-mcp',
+  version: '0.1.1',
   capabilities: {
     resources: {},
     tools: {},
@@ -24,8 +24,26 @@ export async function startServer() {
     await server.connect(transport);
   } catch (error) {
     console.error('starting server failed:', error);
-    process.exit(1);
+    process.exit(0);
   }
 }
+
+// process.on('SIGINT', async () => {
+//   console.log('Received SIGINT. Cleaning up...');
+//   try {
+//     // Perform asynchronous cleanup tasks here
+//     await cleanupTasks();
+//   } catch (error) {
+//     console.error('Error during cleanup:', error);
+//   } finally {
+//     process.exit(0);
+//   }
+// });
+
+// async function cleanupTasks(): Promise<void> {
+//   // Example: Close database connections, stop servers, etc.
+//   // await db.close();
+//   // await server.stop();
+// }
 
 startServer();

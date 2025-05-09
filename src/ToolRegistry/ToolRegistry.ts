@@ -9,9 +9,11 @@ export class ToolRegistry {
   constructor(server: McpServer, cookbook: CookbookManager) {
     this.server = server;
     this.cookbook = cookbook;
+
+    this.registry();
   }
 
-  registry() {
+  private registry() {
     this.registerQueryAllRecipesTool();
     this.registerQueryRecipesByCategoryTool();
     this.registerRecommendMealsTool();
